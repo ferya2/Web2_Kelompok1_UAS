@@ -1,6 +1,13 @@
 ## Final Proyek Web Programming 2 
 - Mata Kuliah : Web Programming 2
-- Dosen Pengampu : Muhammad Ikhwan Fathulloh 
+- Dosen Pengampu : Muhammad Ikhwan Fathulloh
+
+## Kelompok 
+- Kelompok : Kelompok 1
+- Proyek : Sistem Voting
+- Anggota :
+  - Ketua : Adella Tasya
+  - Anggota : Ade Fery Angriawan
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
