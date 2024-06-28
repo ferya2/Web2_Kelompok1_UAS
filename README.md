@@ -9,6 +9,12 @@
   - Ketua : Adella Tasya
   - Anggota : Ade Fery Angriawan
 
+## Judul Proyek 
+Proyek ini berjudul "Sistem Voting"
+
+## Penjelasan Proyek 
+Sebuah proyek sistem voting adalah usaha untuk merancang, mengembangkan, dan mengimplementasikan sistem yang memungkinkan proses pemilihan atau pengambilan keputusan dengan cara yang adil, transparan, dan efisien. Proyek ini melibatkan berbagai tahap mulai dari perencanaan, pengembangan, serta implementasi penggunaannya 
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
