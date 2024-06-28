@@ -15,6 +15,32 @@ Proyek ini berjudul "Sistem Voting"
 ## Penjelasan Proyek 
 Sebuah proyek sistem voting adalah usaha untuk merancang, mengembangkan, dan mengimplementasikan sistem yang memungkinkan proses pemilihan atau pengambilan keputusan dengan cara yang adil, transparan, dan efisien. Proyek ini melibatkan berbagai tahap mulai dari perencanaan, pengembangan, serta implementasi penggunaannya 
 
+## Komponen Proyek 
+Komponen yang terdapat pada proyek ini, diantaranya :
+- Fitur Peserta
+- Fitur Paslon atau Calon Kandidat
+- Fitur Voting
+- Fitur Riwayat Voting (admin) 
+- Fitur Kalkulasi Voting (admin) 
+
+## Pembagian Tim 
+Pembagian dalam proses pengerjaan proyek ini diantaranya : 
+- Ade Fery
+  Tugas pengerjaan :
+  - Fitur Peserta
+  - Fitur Paslon
+  - Fitur Voting
+- Adella Tasya
+  Tugas pengerjaan :
+  - Fitur Riwayat Voting
+  - Fitur Kalkulasi Voting
+
+ Progres pengerjaan proyek :
+ - Customize Template
+ - Fitur Pesera (done)
+ - Fitur Paslon (ongoing)
+ - Fitur Voting (ongoing)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
