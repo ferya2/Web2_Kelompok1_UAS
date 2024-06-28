@@ -25,13 +25,11 @@ Komponen yang terdapat pada proyek ini, diantaranya :
 
 ## Pembagian Tim 
 Pembagian dalam proses pengerjaan proyek ini diantaranya : 
-- Ade Fery
-  Tugas pengerjaan :
+- Ade Fery, tugas pengerjaan :
   - Fitur Peserta
   - Fitur Paslon
   - Fitur Voting
-- Adella Tasya
-  Tugas pengerjaan :
+- Adella Tasya, tugas pengerjaan :
   - Fitur Riwayat Voting
   - Fitur Kalkulasi Voting
 
