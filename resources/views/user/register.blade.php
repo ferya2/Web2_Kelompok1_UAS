@@ -3,7 +3,7 @@
 @section('title', 'Register')
 
 @section('content')
-    <form method="POST" action="/user/register/store">
+    <form id="registerForm" method="POST" action="{{ url('/user/register/store') }}">
         @csrf
         <div class="form-floating">
             <input type="text" class="form-control mb-3" name="name" placeholder="Masukkan Nama" required>
@@ -23,5 +23,11 @@
         <div class="d-flex justify-content-end mt-4">
             <a class="text-primary fw-bold" href="{{ url('/user/login') }}">Sudah punya akun?</a>
         </div>
+
+        @if (session('account_exists'))
+            <div class="alert alert-danger mt-3" role="alert">
+                Akun dengan email tersebut sudah terdaftar.
+            </div>
+        @endif
     </form>
 @endsection

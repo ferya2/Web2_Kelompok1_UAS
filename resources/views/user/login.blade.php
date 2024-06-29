@@ -8,6 +8,10 @@
             {{ session('error') }}
         </div>
     @endif
+    @error('email')
+        <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+
     <form method="POST" action="/user/login/auth">
         @csrf
         <div class="form-floating">

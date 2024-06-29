@@ -15,19 +15,30 @@ class UserController extends Controller
     }
 
     public function storeRegister(Request $request)
-{
-    $user = [
-        'name' => $request->name,
-        'email' => $request->email,
-        'password' => bcrypt($request->password),
-        'role' => 'user',
-    ];
-    // dd($user);
-    User::create($user);
+    {
+        // Check if the email already exists
+        $existingUser = User::where('email', $request->email)->first();
 
-    // Redirect to the login page
-    return redirect('/dashboard')->with('success', 'Registration successful. Please login.');
-}
+        if ($existingUser) {
+            // Redirect back with error message using session
+            return redirect('/user/register')->with('account_exists', true);
+        }
+
+        // Create new user if email doesn't exist
+        $user = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'role' => 'user',
+        ];
+
+        User::create($user);
+
+        // Set success message for redirect
+        return redirect('/user/login')->with('success_message', 'Registration successful. Please login.');
+    }
+
+
 
 
     public function login()
@@ -48,7 +59,13 @@ class UserController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('/dashboard');
+            if (auth()->user()->role == 'admin') {
+                // Redirect admin to dashboard
+                return redirect()->intended('/dashboard');
+            } else {
+                // Redirect non-admin users to their respective dashboard or homepage
+                return redirect()->intended('/dashboard');
+            }
         }
 
         // Authentication failed...
@@ -56,6 +73,8 @@ class UserController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ]);
     }
+
+
 
     public function logout(Request $request)
     {

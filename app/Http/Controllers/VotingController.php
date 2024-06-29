@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Paslon;
 
 class VotingController extends Controller
 {
@@ -11,7 +12,8 @@ class VotingController extends Controller
      */
     public function index()
     {
-        return view('layouts.home.app');
+        $paslons = Paslon::all();
+        return view('dashboard.voting', compact('paslons'));
     }
 
     /**

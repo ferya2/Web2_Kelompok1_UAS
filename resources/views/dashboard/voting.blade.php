@@ -5,55 +5,39 @@
 @section('content')
     <div class="container">
         <h1 class="my-4">Voting</h1>
-        <p>Pilih kandidat yang Anda dukung dengan memilih salah satu opsi di bawah ini:</p>
+        <p>Pilih paslon yang Anda dukung dengan memilih salah satu opsi di bawah ini:</p>
         <form action="{{ url('/submit-vote') }}" method="post">
             @csrf
             <div class="row">
-                <!-- Candidate 1 -->
-                <div class="col-md-4">
-                    <div class="card shadow-lg mb-4">
-                        <div class="card-img-wrapper ">
-                            <img src="../assets/images/logos/votingapp-logo.png" class="card-img-top" alt="Foto Kandidat 1">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Kandidat 1</h5>
-                            <p class="card-text"><strong>Visi:</strong> Visi dari Kandidat 1.</p>
-                            <p class="card-text"><strong>Misi:</strong> Misi dari Kandidat 1.</p>
-                            <button type="submit" name="vote" value="Candidate 1"
-                                class="btn btn-primary w-100 mt-2">Vote</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Candidate 2 -->
-                <div class="col-md-4">
-                    <div class="card shadow-lg mb-4">
-                        <div class="card-img-wrapper ">
-                            <img src="../assets/images/logos/votingapp-logo.png" class="card-img-top" alt="Foto Kandidat 2">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Kandidat 2</h5>
-                            <p class="card-text"><strong>Visi:</strong> Visi dari Kandidat 2.</p>
-                            <p class="card-text"><strong>Misi:</strong> Misi dari Kandidat 2.</p>
-                            <button type="submit" name="vote" value="Candidate 2"
-                                class="btn btn-primary w-100 mt-2">Vote</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Candidate 3 -->
-                <div class="col-md-4">
-                    <div class="card shadow-lg mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="../assets/images/logos/votingapp-logo.png" class="card-img-top" alt="Foto Kandidat 3">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Kandidat 3</h5>
-                            <p class="card-text"><strong>Visi:</strong> Visi dari Kandidat 3.</p>
-                            <p class="card-text"><strong>Misi:</strong> Misi dari Kandidat 3.</p>
-                            <button type="submit" name="vote" value="Candidate 3"
-                                class="btn btn-primary w-100 mt-2">Vote</button>
+                @foreach ($paslons as $paslon)
+                    <div class="col-md-4">
+                        <div class="card shadow-lg mb-4 h-100">
+                            <div class="card-img-wrapper">
+                                <img src="{{ asset('storage/' . $paslon->gambar) }}" class="card-img-top"
+                                    alt="Foto {{ $paslon->nama }}">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center nama">{{ $paslon->nama }}</h5>
+                                <div class="card-text">
+                                    <p class="section-title"><strong>Visi:</strong></p>
+                                    <ul class="list-unstyled section-content visi">
+                                        <li>{{ $paslon->visi }}</li>
+                                    </ul>
+                                    <p class="section-title"><strong>Misi:</strong></p>
+                                    <ul class="list-unstyled section-content misi">
+                                        @foreach (explode("\n", $paslon->misi) as $misi)
+                                            <li>{{ $misi }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                <div class="mt-auto">
+                                    <button type="submit" name="vote" value="{{ $paslon->id }}"
+                                        class="btn btn-primary w-100 mt-2">Vote</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </form>
     </div>
@@ -61,23 +45,55 @@
 
 @section('styles')
     <style>
-        .card {
-            transition: box-shadow 0.8s;
+        .card-img-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
-        .card:hover {
-            box-shadow: 2 4rem 1rem rgba(0, 0, 0, 5);
-        }
-
-        /* Hapus atau ubah gaya ini */
-        /* .card-img-wrapper {
-                                            padding: 15px;
-                                            background-color: grey;
-                                        } */
 
         .card-img-top {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nama {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .visi,
+        .misi {
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .section-content {
+            padding-left: 20px;
         }
     </style>
 @endsection
