@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="/category" aria-expanded="false">
+                <a class="sidebar-link" href="/dashboard/detailpaslon" aria-expanded="false">
                     <span>
                         <i class="ti ti-user"></i>
                     </span>

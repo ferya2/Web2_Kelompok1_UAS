@@ -13,9 +13,14 @@ class Paslon extends Model
         'nama',
         'visi',
         'misi',
+        'programkerja',
         'gambar',
+        'jumlahvote',
     ];
 
     protected $table = 'paslon';
-
+    public function votes()
+    {
+        return $this->hasMany(Vote::class);
+    }
 }

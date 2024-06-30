@@ -13,7 +13,9 @@ class CreatePaslonTable extends Migration
             $table->string('nama');
             $table->text('visi');
             $table->text('misi');
+            $table->text('programkerja');
             $table->string('gambar')->nullable();
+            $table->integer('jumlahvote')->default(0);
             $table->timestamps();
         });
     }

@@ -26,8 +26,9 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/voting', [VotingController::class, 'index']); // Pastikan rute ini mengarah ke metode index
     Route::get('/hubungikami', [DashboardController::class, 'hubungikami']);
     Route::get('/result', [VotingController::class, 'result']);
+    Route::get('/detailpaslon/', [DashboardController::class, 'detailpaslon']);
 });
-
+// Submit Vote
 Route::post('/submit-vote', [VotingController::class, 'store']);
 
 

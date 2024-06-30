@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Paslon;
 class DashboardController extends Controller
 {
     public function index()
@@ -18,5 +18,10 @@ class DashboardController extends Controller
     public function hubungikami()
     {
         return view('bantuan.hubungikami');
+    }
+    public function detailpaslon()
+    {
+        $paslons = Paslon::all();
+        return view('dashboard.detailpaslon', compact('paslons'));
     }
 }

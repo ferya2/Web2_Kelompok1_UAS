@@ -30,6 +30,10 @@
                         <label for="misi">Misi</label>
                         <textarea name="misi" class="form-control" required></textarea>
                     </div>
+                    <div class="form-group">
+                        <label for="programkerja">Program Kerja</label>
+                        <textarea name="programkerja" class="form-control" required></textarea>
+                    </div>
                     <button type="submit" class="btn btn-primary">Tambah</button>
                 </form>
             </div>
@@ -49,6 +53,7 @@
                     <th>Nama</th>
                     <th>Visi</th>
                     <th>Misi</th>
+                    <th>Program kerja</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -61,6 +66,7 @@
                         <td>{{ $paslon->nama }}</td>
                         <td>{{ $paslon->visi }}</td>
                         <td>{!! nl2br(e($paslon->misi)) !!}</td>
+                        <td>{{ $paslon->programkerja }}</td>
                         <td>
                             <a href="{{ route('admin.managepaslon.edit', $paslon->id) }}" class="btn btn-warning">Edit</a>
                             <form action="{{ route('admin.managepaslon.destroy', $paslon->id) }}" method="post"

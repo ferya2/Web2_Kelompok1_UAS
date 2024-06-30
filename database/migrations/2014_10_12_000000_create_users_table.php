@@ -17,16 +17,21 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password')->bcrypt('password');
             $table->string('role')->default('user');
+            $table->boolean('has_voted')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });
     }
 
+
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('has_voted');
+        });
     }
+
 };

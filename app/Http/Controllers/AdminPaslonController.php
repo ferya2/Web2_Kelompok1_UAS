@@ -21,6 +21,7 @@ class AdminPaslonController extends Controller
         'nama' => 'required',
         'visi' => 'required',
         'misi' => 'required',
+        'programkerja' => 'required',
     ]);
 
     $imagePath = $request->file('gambar')->store('images', 'public');
@@ -30,6 +31,7 @@ class AdminPaslonController extends Controller
         'nama' => $request->nama,
         'visi' => $request->visi,
         'misi' => $request->misi,
+        'programkerja' => $request->programkerja,
     ]);
 
     return redirect()->route('admin.managepaslon')->with('success', 'Paslon berhasil ditambahkan');
@@ -49,6 +51,7 @@ class AdminPaslonController extends Controller
             'nama' => 'required',
             'visi' => 'required',
             'misi' => 'required',
+            'programkerja' => 'required',
         ]);
 
         $paslon = Paslon::findOrFail($id);
@@ -61,6 +64,7 @@ class AdminPaslonController extends Controller
         $paslon->nama = $request->nama;
         $paslon->visi = $request->visi;
         $paslon->misi = $request->misi;
+        $paslon->programkerja = $request->programkerja;
 
         $paslon->save();
 

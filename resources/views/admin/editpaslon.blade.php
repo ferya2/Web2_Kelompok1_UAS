@@ -26,6 +26,10 @@
                 <label for="misi">Misi</label>
                 <textarea name="misi" class="form-control" required>{{ $paslon->misi }}</textarea>
             </div>
+            <div class="form-group">
+                <label for="programkerja">Program Kerja</label>
+                <textarea name="programkerja" class="form-control" required>{{ $paslon->programkerja }}</textarea>
+            </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>

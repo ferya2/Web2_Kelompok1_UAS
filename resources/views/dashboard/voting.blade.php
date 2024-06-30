@@ -5,6 +5,16 @@
 @section('content')
     <div class="container">
         <h1 class="my-4">Voting</h1>
+        @if (session('success'))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('error') }}
+            </div>
+        @endif
         <p>Pilih paslon yang Anda dukung dengan memilih salah satu opsi di bawah ini:</p>
         <form action="{{ url('/submit-vote') }}" method="post">
             @csrf
