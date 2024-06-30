@@ -49,9 +49,9 @@ Pembagian dalam proses pengerjaan proyek ini diantaranya :
  - Fitur Voting (done)
 
 # Project Structure
-    This project follows the MVC architecture:
-    - **Model**: Contains the data structure for city and weather information.
-    - **View**: Contains the UI components of the app.
+This project follows the MVC architecture:
+    - **Model**: Manages data and business rules.
+    - **View**: Handles the presentation of data to users.
     - **Controller**: Processes input, connects the model with the view, and manages the application flow.
 
 ---
