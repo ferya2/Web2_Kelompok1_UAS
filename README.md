@@ -84,13 +84,12 @@ To start using this project, ensure you have Flutter installed on your system. F
    ```bash
    php artisan serve
 
+
 # Project Structure
-
-This project follows the MVVM architecture:
-
-- **Model**: Contains the data structure for city and weather information.
-- **View**: Contains the UI components of the app.
-- **Controller**: Processes input, connects the model with the view, and manages the application flow.
+    This project follows the MVC architecture:
+    - **Model**: Contains the data structure for city and weather information.
+    - **View**: Contains the UI components of the app.
+    - **Controller**: Processes input, connects the model with the view, and manages the application flow.
 
 ---
 
