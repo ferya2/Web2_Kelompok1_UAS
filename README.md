@@ -92,7 +92,7 @@ To start using this project, ensure you have Flutter installed on your system. F
    php artisan storage:link
 10. **Run local server**:
    ```bash
-   php artisan serve
+    php artisan serve
 
 
 
