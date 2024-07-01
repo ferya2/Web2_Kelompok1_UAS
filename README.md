@@ -75,24 +75,19 @@ To start using this project, ensure you have Flutter installed on your system. F
 4. **Generate App Key**:
    ```bash
    php artisan key:generate
-5. **Generate App Key**:
-   ```bash
-   php artisan key:generate
-6. **Set Database Configuration**:
+5. **Set Database Configuration**:
    ```bash
    DB_DATABASE=web2kelompok1_uas
-7. **Migrate Database**:
+6. **Migrate Database**:
    ```bash
    php artisan migrate
-8. **Set Storage and copy images paslon in Resource ../assets/images/paslon to folder storage/app/public**:
+7. **Set Storage and copy images paslon in Resource ../assets/images/paslon to folder storage/app/public**:
    ```bash
    php artisan storage:link
-9. **Generate Database**:
+8. **Generate Database**:
    ```bash
    php artisan db:seed
-10. **Run local server**:
+9. **Run Local Server**:
    ```bash
-     php artisan serve
-
-
+   php artisan serve
 
