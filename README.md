@@ -84,15 +84,15 @@ To start using this project, ensure you have Flutter installed on your system. F
 7. **Migrate Database**:
    ```bash
    php artisan migrate
-8. **Generate Database**:
-   ```bash
-   php artisan db:seed
-9. **Set Storage and copy images paslon in Resource ../assets/images/paslon to folder storage/app/public**:
+8. **Set Storage and copy images paslon in Resource ../assets/images/paslon to folder storage/app/public**:
    ```bash
    php artisan storage:link
+9. **Generate Database**:
+   ```bash
+   php artisan db:seed
 10. **Run local server**:
    ```bash
-    php artisan serve
+     php artisan serve
 
 
 
