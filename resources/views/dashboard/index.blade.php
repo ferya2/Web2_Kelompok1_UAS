@@ -9,24 +9,19 @@
             <section id="instructions">
                 <h2>Instruksi</h2>
                 <ol>
-                    <li>Baca semua opsi dengan seksama.</li>
-                    <li>Pilih opsi yang Anda inginkan dengan mengklik tombol yang sesuai.</li>
-                    <li>Kirimkan suara Anda dengan mengklik tombol "Submit Vote".</li>
+                    <li>Daftar Akun terlebih dahulu jika belum memiliki akun.</li>
+                    <li>Login menggunakan akun yang telah didaftarkan.</li>
+                    <li>Anda hanya memiliki satu hak suara untuk satu kandidat.</li>
+                    <li>Lihat detail kandidat untuk memahami platform mereka.</li>
+                    <li>Pilih kandidat tanpa adanya paksaan dari pihak manapun.</li>
+                    <li>Vote Anda akan direkam dan tidak dapat diubah.</li>
+                    <li>Terima kasih atas partisipasi Anda!</li>
                 </ol>
             </section>
             <section id="details" class="mt-4">
                 <h2>Detail Pemilihan</h2>
-                <p>Selamat datang di panduan pemilihan. Ikuti petunjuk di bawah ini untuk memberikan suara Anda dengan
-                    efektif:</p>
-                <ul>
-                    <li><strong>Langkah 1:</strong> Tinjau profil dan kebijakan masing-masing kandidat dengan seksama.</li>
-                    <li><strong>Langkah 2:</strong> Ketika Anda siap, klik tombol "Vote" di sebelah nama kandidat pilihan
-                        Anda.</li>
-                    <li><strong>Langkah 3:</strong> Konfirmasikan pilihan Anda di halaman konfirmasi untuk menyelesaikan
-                        suara Anda.</li>
-                </ul>
-                <p>Penting untuk meluangkan waktu Anda dan membuat keputusan yang tepat. Suara Anda sangat penting dalam
-                    membentuk masa depan komunitas kita.</p>
+                <p>Selamat datang di panduan pemilihan. Ikuti petunjuk di atas untuk memberikan suara Anda dengan
+                    efektif.</p>
                 <h3>Informasi Tambahan</h3>
                 <p>Jika Anda mengalami masalah selama proses pemilihan, silakan hubungi tim dukungan kami untuk bantuan.</p>
                 <p>Ingat, pemilihan ini bersifat rahasia dan pilihan Anda akan tetap anonim.</p>
@@ -45,17 +40,28 @@
             <section id="resources" class="mt-4">
                 <h2>Sumber Daya</h2>
                 <p>Untuk informasi lebih lanjut tentang para kandidat dan platform mereka, kunjungi tautan berikut:</p>
-                <ul>
-                    <li><a href="#">Profil Kandidat 1</a></li>
-                    <li><a href="#">Profil Kandidat 2</a></li>
-                    <li><a href="#">Profil Kandidat 3</a></li>
-                    <li><a href="#">FAQ Pemilihan</a></li>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url('https://www.instagram.com/aniesbaswedan/') }}"><i class="fas fa-user-circle"></i>
+                            Profil Kandidat 1</a>
+                    </li>
+                    <li><a href="{{ url('https://www.instagram.com/prabowo/') }}"><i class="fas fa-user-circle"></i> Profil
+                            Kandidat 2</a>
+                    </li>
+                    <li><a href="{{ url('https://www.instagram.com/ganjar_pranowo/') }}"><i class="fas fa-user-circle"></i>
+                            Profil Kandidat 3</a>
+                    </li>
+                    <li><a href="/dashboard/faq-voting"><i class="fas fa-question-circle"></i> FAQ Pemilihan</a></li>
                 </ul>
             </section>
             <!-- Button Vote Now -->
             <div class="d-flex justify-content-end mt-4">
                 <a href="{{ url('dashboard/voting') }}" class="btn btn-primary btn-lg">Vote Now</a>
             </div>
+            <!-- Help Button -->
+            <div class="mt-3">
+                <a href="/dashboard/hubungikami" class="text-muted">Bantuan</a>
+            </div>
         </div>
     </div>
+
 @endsection

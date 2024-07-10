@@ -27,6 +27,10 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/hubungikami', [DashboardController::class, 'hubungikami']);
     Route::get('/result', [VotingController::class, 'result']);
     Route::get('/detailpaslon/', [DashboardController::class, 'detailpaslon']);
+    //hubungi kami
+    Route::post('/hubungikami/', [DashboardController::class, 'hubungikami']);
+    //faq
+    Route::get('/faq-voting', [DashboardController::class, 'showFaqVoting'])->name('faq-voting');
 });
 // Submit Vote
 Route::post('/submit-vote', [VotingController::class, 'store']);

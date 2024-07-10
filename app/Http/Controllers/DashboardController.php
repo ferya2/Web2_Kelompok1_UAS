@@ -24,4 +24,8 @@ class DashboardController extends Controller
         $paslons = Paslon::all();
         return view('dashboard.detailpaslon', compact('paslons'));
     }
+    public function showFaqVoting()
+    {
+        return view('bantuan.faq');
+    }
 }

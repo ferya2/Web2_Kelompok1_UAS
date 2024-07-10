@@ -47,8 +47,8 @@ Pembagian dalam proses pengerjaan proyek ini diantaranya :
  - Fitur Pesera (done)
  - Fitur Paslon (done)
  - Fitur Voting (done)
- - Fitur Riwayat Voting (on progress)
- - Fitur Kalkulasi Voting (on progress)
+ - Fitur Riwayat Voting (done)
+ - Fitur Kalkulasi Voting (done)
 
 # Project Structure
 This project follows the MVC architecture:

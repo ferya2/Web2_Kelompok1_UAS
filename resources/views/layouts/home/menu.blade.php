@@ -44,7 +44,7 @@
             <li class="sidebar-item">
                 <a class="sidebar-link" href="/admin/managepaslon" aria-expanded="false">
                     <span>
-                        <i class="ti ti-file"></i>
+                        <i class="ti ti-user"></i>
                     </span>
                     <span class="hide-menu">Manage Paslon</span>
                 </a>
@@ -60,7 +60,7 @@
             <li class="sidebar-item">
                 <a class="sidebar-link" href="/admin/managepaslon/history" aria-expanded="false">
                     <span><i class="ti ti-folder"></i></span>
-                    <span class="hide-menu">Detail Voting</span>
+                    <span class="hide-menu">Riwayat Voting</span>
                 </a>
             </li>
         @endif
@@ -70,7 +70,7 @@
             <span class="hide-menu">Bantuan</span>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link" href="/note" aria-expanded="false">
+            <a class="sidebar-link" href="/dashboard/faq-voting" aria-expanded="false">
                 <span>
                     <i class="ti ti-help"></i>
                 </span>
