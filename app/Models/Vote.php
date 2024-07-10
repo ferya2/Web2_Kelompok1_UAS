@@ -18,7 +18,7 @@ class Vote extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id')->select('name'); // Memilih kolom name' dari tabel 'users'
+        return $this->belongsTo(User::class, 'user_id')->select('id', 'name'); // Memilih kolom name' dari tabel 'users'
     }
     public function paslon()
     {

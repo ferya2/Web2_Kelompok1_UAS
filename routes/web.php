@@ -48,4 +48,6 @@ Route::prefix('admin')->group(function () {
     Route::get('/managepaslon/{id}/edit', [AdminPaslonController::class, 'edit'])->name('admin.managepaslon.edit');
     Route::put('/managepaslon/{id}', [AdminPaslonController::class, 'update'])->name('admin.managepaslon.update');
     Route::delete('/managepaslon/{id}', [AdminPaslonController::class, 'destroy'])->name('admin.managepaslon.destroy');
+    Route::get('/managepaslon/results', [AdminPaslonController::class, 'results'])->name('admin.results.hasil');
+    Route::get('/managepaslon/history', [AdminPaslonController::class, 'history'])->name('admin.history.history');
 });

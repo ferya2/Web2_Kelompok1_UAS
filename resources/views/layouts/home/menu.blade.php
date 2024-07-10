@@ -50,7 +50,7 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="/note" aria-expanded="false">
+                <a class="sidebar-link" href="/admin/managepaslon/results" aria-expanded="false">
                     <span>
                         <i class="ti ti-file"></i>
                     </span>
@@ -58,7 +58,7 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="/todolist" aria-expanded="false">
+                <a class="sidebar-link" href="/admin/managepaslon/history" aria-expanded="false">
                     <span><i class="ti ti-folder"></i></span>
                     <span class="hide-menu">Detail Voting</span>
                 </a>

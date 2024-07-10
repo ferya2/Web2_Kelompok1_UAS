@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Paslon;
+use App\Models\Vote;
+use App\Models\User;
 
 class AdminPaslonController extends Controller
 {
@@ -77,5 +79,28 @@ class AdminPaslonController extends Controller
         $paslon->delete();
 
         return redirect()->route('admin.managepaslon')->with('success', 'Paslon berhasil dihapus');
+    }
+
+    public function results()
+    {
+        $paslons = Paslon::all();
+        $totalVotes = Vote::count();
+        
+        $results = $paslons->map(function($paslon) use ($totalVotes) {
+            $percentage = $totalVotes > 0 ? ($paslon->jumlahvote / $totalVotes) * 100 : 0;
+            return [
+                'paslon' => $paslon,
+                'percentage' => $percentage
+            ];
+        });
+
+        return view('admin.hasil',  ['results' => $results]);
+    }
+
+    public function history()
+    {
+        $votes = Vote::with('user', 'paslon')->get();
+
+        return view('admin.history', compact('votes'));
     }
 }

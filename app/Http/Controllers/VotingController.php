@@ -7,6 +7,7 @@ use App\Models\Paslon;
 use App\Models\Vote;
 use App\Models\User;
 
+
 class VotingController extends Controller
 {
     /**
