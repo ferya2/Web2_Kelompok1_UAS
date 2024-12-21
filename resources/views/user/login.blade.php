@@ -27,7 +27,7 @@
 
         <!-- Flex container for alignment -->
         <div class="d-flex justify-content-end mt-4">
-            <a class="text-primary fw-bold" href="/user/register">Sign Up</a>
+            <a class="text-primary fw-bold" href="/user/register">Create an Account</a>
         </div>
     </form>
 @endsection
